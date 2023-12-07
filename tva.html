@@ -5,18 +5,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eval TVA</title>
+    <link href="./css/tva.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
-    <p><strong>Prix HT</strong> <input type="number" id="ht" value="120"> </p>
-    <button id="tva-2" type="text" value="2.1"> 2,1 </button>
-    <button id="tva-5" type="text" value="5.5"> 5,5 </button>
-    <button id="tva-10" type="text" value="10"> 10 </button>
-    <button id="tva-20" type="text" value="20"> 20 </button>
 
-    <p> Prix TVA : <strong id="tva">----</strong> €</p>
-    <p> Prix TTC : <strong id="ttc">----</strong> €</p>
-
+    <div class="bodyprice">
+        <div class="price">
+            <p><strong>Prix HT</strong> <input type="number" id="ht" value="120"> </p>
+        </div>
+        <div id="btn">
+            <button id="tva-2" type="text" value="2.1"> 2,1 </button>
+            <button id="tva-5" type="text" value="5.5"> 5,5 </button>
+            <button id="tva-10" type="text" value="10"> 10 </button>
+            <button id="tva-20" type="text" value="20"> 20 </button>
+        </div>
+        <div class="result">
+            <p> Prix TVA : <strong id="tva">----</strong> €</p>
+            <p> Prix TTC : <strong id="ttc">----</strong> €</p>
+        </div>
+    </div>
 
     <script>
         let ht = document.getElementById("ht");

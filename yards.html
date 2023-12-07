@@ -5,12 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eval Yards en Mètres </title>
+    <link href="./css/yards.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
-    <p> <strong>Yards</strong> <input type="number" id="Yards" value="5"> </p>
-    <button id="calc" type="text">Calculer en mètres </button>
-    <p> <strong id="result">----</strong> m</p>
+
+    <div class="yards">
+        <div class="value">
+            <p> <strong>Yards</strong> <input type="number" id="Yards" value="5"> </p>
+        </div>
+        <div class="result">
+            <button id="calc" type="text">Calculer en mètres </button>
+            <br>
+            <p> <strong id="result">----</strong> m</p>
+        </div>
+    </div>
 
     <script>
         let Yards = document.getElementById("Yards");
