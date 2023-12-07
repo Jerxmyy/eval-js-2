@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eval Yards en Mètres </title>
+</head>
+
+<body>
+    <p> <strong>Yards</strong> <input type="number" id="Yards" value="5"> </p>
+    <button id="calc" type="text">Calculer en mètres </button>
+    <p> <strong id="result">----</strong> m</p>
+
+    <script>
+        let Yards = document.getElementById("Yards");
+        let calc = document.getElementById("calc");
+        let result = document.getElementById("result")
+
+        calc.onclick = function () {
+            // 1 Yards = 0.9144;
+            let x = (Number(Yards.value) * 0.9144);
+            console.log(x);
+            result.innerHTML = x;
+        }
+
+    </script>
+</body>
+
+</html>

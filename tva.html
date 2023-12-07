@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eval TVA</title>
+</head>
+
+<body>
+    <p><strong>Prix HT</strong> <input type="number" id="ht" value="120"> </p>
+    <button id="tva-2" type="text" value="2.1"> 2,1 </button>
+    <button id="tva-5" type="text" value="5.5"> 5,5 </button>
+    <button id="tva-10" type="text" value="10"> 10 </button>
+    <button id="tva-20" type="text" value="20"> 20 </button>
+
+    <p> Prix TVA : <strong id="tva">----</strong> €</p>
+    <p> Prix TTC : <strong id="ttc">----</strong> €</p>
+
+
+    <script>
+        let ht = document.getElementById("ht");
+        let tva2 = document.getElementById("tva-2");
+        let tva5 = document.getElementById("tva-5");
+        let tva10 = document.getElementById("tva-10");
+        let tva20 = document.getElementById("tva-20");
+        let ttc = document.getElementById("ttc");
+        let tva = document.getElementById("tva");
+        let x = ""
+        let y = ""
+
+        // TVA = Prix HT × (Taux de TVA / 100)
+
+        tva2.onclick = function () {
+            x = (Number(ht.value) * Number(tva2.value) / 100);
+            tva.innerHTML = x;
+            y = (Number(ht.value) + Number(tva2.value));
+            ttc.innerHTML = y;
+        }
+
+        tva5.onclick = function () {
+            x = (Number(ht.value) * Number(tva5.value) / 100);
+            tva.innerHTML = x;
+            y = (Number(ht.value) + Number(tva5.value));
+            ttc.innerHTML = y;
+        }
+        tva10.onclick = function () {
+            x = (Number(ht.value) * Number(tva10.value) / 100);
+            tva.innerHTML = x;
+            y = (Number(ht.value) + Number(tva10.value));
+            ttc.innerHTML = y;
+        }
+        tva20.onclick = function () {
+            x = (Number(ht.value) * Number(tva20.value) / 100);
+            tva.innerHTML = x;
+            y = (Number(ht.value) + Number(tva20.value));
+            ttc.innerHTML = y;
+        }
+
+    </script>
+</body>
+
+</html>
